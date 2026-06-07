@@ -13,7 +13,7 @@ def calculate(num_1, num_2, action):
     else:
         return "Невідома дія!"
 
-# Цикл — окремо від функції
+
 while True:
     action = input("Введи дію (+, -, *, /, вихід): ")
     if action == "вихід":

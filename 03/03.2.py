@@ -3,6 +3,7 @@ def move_last_to_first(lst):
         return lst
     return [lst[-1]] + lst[:-1]
 
+
 print(move_last_to_first([12, 3, 4, 10]))
 print(move_last_to_first([1]))
 print(move_last_to_first([]))

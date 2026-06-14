@@ -8,4 +8,18 @@ remainder_2 = remainder % 3600
 minutes = remainder_2 // 60
 remainder_3 = remainder_2 % 60
 
-print(f"{days} дні, {hours}:{minutes}:{remainder_3}")
+word = ""
+
+if days == 0:
+    word = "днів"
+elif days % 10 == 1 and days != 11:
+    word = "день"
+elif 2 <= days % 10 <= 4 and not (11 <= days <= 14):
+    word = "дні"
+else:
+    word = "днів"
+
+h = str(hours).zfill(2)
+m = str(minutes).zfill(2)
+s = str(remainder_3).zfill(2)
+print(f"{days} {word}, {h}:{m}:{s}")
